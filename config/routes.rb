@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :superpowers, only: [:index]
-  resources :superheroes, only: [:index]
+
+  root 'superheroes#index'
+  resources :superpowers
+  resources :superheroes
 
 end
