@@ -1,0 +1,22 @@
+<h1> Add Superhero </h1>
+
+<%= form_for :superhero, url: superheroes_path do |f| %>
+    <p>
+    <%= f.label :name %> <br>
+    <%= f.text_field :title %>
+    </p>
+
+    <p>
+    <%= f.label :super_name %> <br>
+    <%= f.text_field :super_name %> 
+    </p>
+
+    <p>
+    <%= f.label :superpower_id %> <br>
+    <%= f.select :superpower_id, ['super strength', 'flight', 'super human strength', 'elasticity'], :prompt => 'Select One' %>
+    </p>
+
+    <p>
+    <%= f.submit %>
+    <p>
+    <% end %>
