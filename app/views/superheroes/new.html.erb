@@ -3,7 +3,7 @@
 <%= form_for :superhero, url: superheroes_path do |f| %>
     <p>
     <%= f.label :name %> <br>
-    <%= f.text_field :title %>
+    <%= f.text_field :name %>
     </p>
 
     <p>
@@ -12,8 +12,8 @@
     </p>
 
     <p>
-    <%= f.label :superpower_id %> <br>
-    <%= f.select :superpower_id, ['super strength', 'flight', 'super human strength', 'elasticity'], :prompt => 'Select One' %>
+    <%= f.label :superpower_name %> <br>
+    <%= f.select :superpower_name, ['super strength', 'flight', 'super human strength', 'elasticity'], :prompt => 'Select One' %>
     </p>
 
     <p>
