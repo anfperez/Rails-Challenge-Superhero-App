@@ -1,5 +1,6 @@
-<p> <% @superhero.name %> </p>
+<h2> Name: <%= @superhero.name %> </h2>
 
-<p> <%= @superhero.super_name %> </p>
+<h2> Super hero name: <%= @superhero.super_name %> </h2>
 
-<p> <%= @superhero.superpower_id %> </p>
+<h2> Superpower: <%= link_to @superhero.superpower_name, superpower_url %> </h2>
+

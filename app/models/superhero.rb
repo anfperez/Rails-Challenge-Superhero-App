@@ -1,3 +1,3 @@
 class Superhero < ApplicationRecord
-    belongs_to :superpowers
+    validates :name, presence:true, length: {minimum:1}
 end

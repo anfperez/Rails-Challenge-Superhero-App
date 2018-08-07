@@ -3,7 +3,8 @@
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+     <%= link_to superhero.super_name, superhero_path(superhero) %>
+      
     </li>
     <br>
   <% end %>
