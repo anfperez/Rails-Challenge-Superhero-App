@@ -1,5 +1,8 @@
 <h2>All Superheroes</h2>
 
+<h3> Search by superpower </h3>
+
+
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
@@ -9,3 +12,5 @@
     <br>
   <% end %>
 </ul>
+
+<%= link_to "Create new superhero", new_superhero_path %>

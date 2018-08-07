@@ -6,5 +6,6 @@ class CreateSuperheroes < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :superheroes, :super_name, unique: true
   end
 end

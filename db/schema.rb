@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180806050935) do
     t.datetime "updated_at",      null: false
     t.integer  "superpower_id"
     t.string   "superpower_name"
+    t.index ["super_name"], name: "index_superheroes_on_super_name", unique: true
   end
 
   create_table "superpowers", force: :cascade do |t|
