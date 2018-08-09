@@ -24,12 +24,12 @@ class SuperheroesController < ApplicationController
     if(@superhero.save)
       redirect_to @superhero
     else
-      render 'new'
+      render 'already_exists'
     end
   end
 
   private def superhero_params
-    params.require(:superhero).permit(:id, :name, :super_name, :superpower_name)
+    params.require(:superhero).permit(:id, :name, :super_name, :superpower_name, :superpower_id)
   end
 
 end

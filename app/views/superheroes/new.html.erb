@@ -14,8 +14,10 @@
 
     <p>
     <%= f.label :superpower_name %> <br>
-    <%= f.select :superpower_name, ['super strength', 'flight', 'super human senses', 'elasticity'], :prompt => 'Select One' %>
+    <%= f.select :superpower_name, options_for_select(Superpower.all.collect { |superpower| [superpower.name, superpower.id]}, f.object.superpower_id), {}, class: 'form-control', include_blank: 'Please Select' %>
     </p>
+
+    
 
     <p>
     <%= f.submit %>

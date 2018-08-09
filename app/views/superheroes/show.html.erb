@@ -2,6 +2,8 @@
 
 <h2> Super hero name: <%= @superhero.super_name %> </h2>
 
-<h2> Superpower: <%= link_to @superhero.superpower_name, superpower_url %> </h2>
+<h2> Superpower: <%= link_to @superhero.superpower_name, superpower_path(@superhero.superpower_name) %> </h2>
 
 <p> <%= link_to "Go back to Superheroes", root_path %> </p>
+
+
