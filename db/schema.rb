@@ -25,9 +25,8 @@ ActiveRecord::Schema.define(version: 20180806050935) do
   create_table "superpowers", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "superpower_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

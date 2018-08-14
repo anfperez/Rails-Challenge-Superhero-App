@@ -1,13 +1,30 @@
 # Rails Superhero Challenge
 
+###How to Run
+* fork from Github repo
+* type `bundle exec rake db:migrate`
+* type `bundle exec rake db:seed`
+* type `rails s` to start the Rails server
+* navigate to localhost:3000 to view the application
+
+### Features
+* view superheroes' names, super names, and superpowers
+* view superpowers and descriptions
+* create a new superhero (no duplicate super names)
+* search by superpower
+
 ## Objectives
 + MVC - done
 + REST - done 
 + Request/Response Cycle - done
-+ Form/Form Helpers - done
++ Form/Form Helpers - done*
 + ActiveRecord - done
 + Validations - done
 
+*one bug remaining: for newly-created superheroes, the superpower name on the 'show' page does not display properly
+
+
+## Learning about Rails applications
 Learning the basics of a Rails application can look daunting, but the implementation is often easier than it looks! The main features of a Rails app include:
 
 ### MVC
