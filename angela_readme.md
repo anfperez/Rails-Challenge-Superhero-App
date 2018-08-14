@@ -22,13 +22,6 @@ This app has models, views, and controllers for Superheroes and Superpowers.
 
 REST: When we build Rails apps, we build apps that are "RESTful" in nature. REST stands for representation state transfer. If you're learning about REST for the first time, try to keep the following things in mind:
 * RESTFUL applications are lightweight, maintainable, and scalable.
-* representations: a RESTFUL app identifies resources and provices access to those resources.
-* messages: the client and server will talk to each other via messages. There is an HTTP request body, which also contains metadata about about the message itself.
-* URIs: each resource must have at least one URI (Uniform Resource Identifier).
-* Request/Response Cycle: 
-Form/Form Helper
-ActiveRecord
-Validations
 
 ## Tasks
 
@@ -45,7 +38,7 @@ On the superheroes index page, I linked the superhero's name to the individual s
 ### Task 3 - Superhero Show page
 The superhero show page includes the superhero's name, superhero name, and superpower. The superpower should link to the relevant superpower show page.*
 
-*still working on the form helper that will allow me to properly capture each new superhero's superpower.
+*there is a bug here in that, for all new superheroes, the superpower_name gets saved as "superpowers/:id" instead of the actual name. I have been working on a solution to this for a few days now. 
 
 ### Task 4 - Superpower show page
 The superpower show page has a name and a description
