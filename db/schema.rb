@@ -10,15 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180806050935) do
+ActiveRecord::Schema.define(version: 20180806022933) do
 
   create_table "superheroes", force: :cascade do |t|
     t.string   "name"
     t.string   "super_name"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "superpower_id"
-    t.string   "superpower_name"
     t.index ["super_name"], name: "index_superheroes_on_super_name", unique: true
   end
 
