@@ -53,7 +53,7 @@ I also added new seeds to the exisiting seeds.rb file so that the tables could r
 On the superheroes index page, I linked the superhero's name to the individual show page.
 
 ### Task 3 - Superhero Show page
-The superhero show page includes the superhero's name, superhero name, and superpower. The superpower should link to the relevant superpower show page.*
+The superhero show page includes the superhero's name, superhero name, and superpower. The superpower should link to the relevant superpower show page.
 
 ### Task 4 - Superpower show page
 The superpower show page has a name and a description
@@ -68,4 +68,4 @@ The form only allows a new superhero to be created with an existing superpower.
 No two superheroes can have the same name. Attempting to create a superhero with a duplicate super name will lead to a page advising the user to try again.
 
 ### Task 8 - Superpower Search Filter
-Visitors can search for superheroes by superpower. On localhost:3000/superheroes, there is a search form that allows users to type in the superpower they want to search for.
+Visitors can search for superheroes by superpower. On localhost:3000/superheroes, there is a search form that allows users to type in the superpower they want to search for. The search will return superheroes who have that particular superpower.
