@@ -8,6 +8,6 @@ class Superhero < ApplicationRecord
     end
 
     def self.search(search)
-        where(self.superpower.name " LIKE ?", "%#{search}%") 
+        where("superpower_name LIKE ?", "%#{search}%") 
     end
 end

@@ -1,7 +1,7 @@
 # Rails Superhero Challenge
 
 ###How to Run
-* fork from Github repo
+* clone from Github repo
 * type `bundle exec rake db:migrate`
 * type `bundle exec rake db:seed`
 * type `rails s` to start the Rails server
@@ -54,8 +54,6 @@ On the superheroes index page, I linked the superhero's name to the individual s
 
 ### Task 3 - Superhero Show page
 The superhero show page includes the superhero's name, superhero name, and superpower. The superpower should link to the relevant superpower show page.*
-
-*there is a bug here in that, for all new superheroes, the superpower_name gets saved as "superpowers/:id" instead of the actual name. I have been working on a solution to this for a few days now. 
 
 ### Task 4 - Superpower show page
 The superpower show page has a name and a description
