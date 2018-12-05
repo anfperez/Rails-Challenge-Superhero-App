@@ -1,58 +1,62 @@
-# Rails Code Challenge
+Rails Superhero Challenge
+##How to Run
 
-It's time to put our Rails know-how to the test. Today, we have a superhero application.
+clone from Github repo
+type bundle exec rake db:migrate
+type bundle exec rake db:seed
+type rails s to start the Rails server
+navigate to localhost:3000 to view the application
+Features
+view superheroes' names, super names, and superpowers
+view superpowers and descriptions
+create a new superhero (no duplicate super names)
+search by superpower
+Objectives
+MVC - done
+REST - done
+Request/Response Cycle - done
+Form/Form Helpers - done*
+ActiveRecord - done
+Validations - done
+*one bug remaining: for newly-created superheroes, the superpower name on the 'show' page does not display properly
 
-## Objectives
-+ MVC
-+ REST
-+ Request/Response Cycle
-+ Form/Form Helpers
-+ ActiveRecord
-+ Validations
+Learning about Rails applications
+Learning the basics of a Rails application can look daunting, but the implementation is often easier than it looks! The main features of a Rails app include:
 
-## Setup
+MVC
+MVC stands for "model - view - controller", and it is the governing principle of how we view Rails applications. It is a pattern used to divide applications into three distinct parts that all interact with each other.
 
-Before you begin, fork and clone this repo, run `bundle install` and `rake db:migrate` to get started.
+model: manages the data, logic, and rules of the application
+view: think of a view as the part that the user sees on the page.
+controller: accepts input and puts it into commands. This app has models, views, and controllers for Superheroes and Superpowers.
+REST
+REST: When we build Rails apps, we build apps that are "RESTful" in nature. REST stands for representation state transfer. If you're learning about REST for the first time, try to keep the following things in mind:
 
-## The Domain
+RESTFUL applications are lightweight, maintainable, and scalable.
+Tasks
+ERD Diagram
+img
 
-You've just been hired by 'Marvel Comics' - congratulations! The production staff wants you to make a website that will allow the fans to create superheroes. To do this, we need a way to keep track of all of the new superheroes and superpowers that have been created by the fans.
+Task 1 - Solving the Associations
+New associations need to be created between the two tables - Superheroes and Superpowers. Using the "rails g migration" command, I added two new columns to superheroes, powerpower_id (integer) and superpower_name (string). I also added new seeds to the exisiting seeds.rb file so that the tables could repopulate with the relevant data.
 
-Luckily, another developer has already started the job. We have a model for superheroes and a model for superpowers. Once the database is seeded, visiting `/superheroes` displays all of the superheroes, and visiting `/superpowers` displays all of the superpowers. We just don't have a way to associate superheroes with superpowers.
+Task 2 - Linking Superhero Show page
+On the superheroes index page, I linked the superhero's name to the individual show page.
 
-We have several different superpowers and each can be bestowed upon **more than one superhero**. Each superhero can only wield **one superpower**.
+Task 3 - Superhero Show page
+The superhero show page includes the superhero's name, superhero name, and superpower. The superpower should link to the relevant superpower show page.
 
-## Instructions / Deliverables
+Task 4 - Superpower show page
+The superpower show page has a name and a description
 
-Read through the instructions to get a sense of the scope of this code challenge, and then tackle them one by one. 
+Task 5 - Create new Superhero
+Visitors to the site can create a new superhero with a name and super name. You can access this page by going to localhost:3000/superheroes and scrolling down to the bottom of the page.
 
-![img](gif2.gif)
+Task 6 - Existing Superpowers
+The form only allows a new superhero to be created with an existing superpower.
 
-1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the superheroes and powers have been created with the proper relations.
+Task 7 - Unique Super Name
+No two superheroes can have the same name. Attempting to create a superhero with a duplicate super name will lead to a page advising the user to try again.
 
-2. On the superheroes index page, a superhero's name should link to the superhero's show page.
-
-3. The superhero show page should include the superhero's name (eg. Peter Parker), its super name (eg. Spider-Man), and its superpower. The superpower should link to the superpower show page.  
-
-4. The superpower show page should have its name and description.
-
-5. As a visitor to the website, I should be able to create a new superhero with its name and super name.
-
-6. The form should also allow each superhero should be created with **only one of the existing superpowers**.
-
-  ![img](add_hero.gif)
-
-7. Make sure no two superheroes have the same super name.
-
-8. Add a filter to the index view of the superheroes. This will allow the visitor to search for an existing superpower and display all the superheroes with that superpower on the same view page.
-
-![img](gif3.gif)
-
-
-
-### Hints / Tips
-+ Draw your domain model and associations before you begin. You may have to alter the current schema to get your code working.
-+ A child model cannot be persisted without being associated with its parent model.
-+ More than one superhero can have the same superpower.
-+ We want to be RESTful. What URL should show info about a particular superhero? What URL should show a form to create a superhero? What controller actions are associated?
-+ If you're having a hard time implementing the filter, take a look at this http://guides.rubyonrails.org/form_helpers.html#a-generic-search-form. We are asking an input field to search for superpowers.
+Task 8 - Superpower Search Filter
+Visitors can search for superheroes by superpower. On localhost:3000/superheroes, there is a search form that allows users to type in the superpower they want to search for. The search will return superheroes who have that particular superpower.
